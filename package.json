@@ -1,0 +1,47 @@
+{
+  "name": "generic-middleware-dispatcher",
+  "version": "0.1.0",
+  "description": "An Express-like generic middleware dispatcher with a settable number of contexts and typescript support",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "eslint . && jest && tsc && uglifyjs dist/index.js --source-map \"content='dist/index.js.map'\" -o dist/index.min.js -c -m --comments",
+    "lint": "eslint .",
+    "test": "jest",
+    "pack": "tsc",
+    "minify": "uglifyjs dist/index.js --source-map \"content='dist/index.js.map'\" -o dist/index.min.js -c -m --comments",
+    "check-deps": "ncu",
+    "update-deps": "ncu -u && npm i"
+  },
+  "author": "MrFigg",
+  "license": "MIT",
+  "homepage": "https://github.com/mrfigg/generic-middleware-dispatcher",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrfigg/generic-middleware-dispatcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrfigg/generic-middleware-dispatcher/issues"
+  },
+  "keywords": [
+    "generic",
+    "middleware",
+    "dispatcher",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "dts-jest": "^26.0.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "jest": "^29.7.0",
+    "npm-check-updates": "^16.14.11",
+    "prettier": "@3.0.3",
+    "socket.io": "^4.7.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.2",
+    "uglify-js": "^3.17.4"
+  }
+}
